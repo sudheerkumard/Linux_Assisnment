@@ -21,16 +21,16 @@ modules_install:
 	$(MAKE) -C $(KERNELDIR) M=$(PWD) modules_install
 
 clean:
-	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions *.order *.symvers ula_test
+	rm -rf *.o *~ core .depend .*.cmd *.ko *.mod.c .tmp_versions *.order *.symvers PID
 
 .PHONY: modules modules_install clean
 
 else
 	# called from kernel build system: just declare what our modules are
-	obj-m := assign4.o
+	obj-m := Assign_Proc.o
 endif
 
-ula_test:
-	gcc ula_test.c  -o ula_test
+PID_C:
+	gcc PID_.c  -o PID
 
 
